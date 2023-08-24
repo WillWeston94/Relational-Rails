@@ -9,8 +9,8 @@ Rails.application.routes.draw do
    post "/faculties", to: "faculties#create" 
  
    get '/faculties/:id', to: "faculties#show"
-   get '/faculties/:id/edit', to: 'faculties#edit'
-   patch '/faculties/:id', to: 'faculties#update'
+   get '/faculties/:id/edit', to: 'faculties#edit', as: 'edit_faculty'
+   patch '/faculties/:id', to: 'faculties#update', as: 'update_faculty'
    
    get '/courses', to: "courses#index"
    get '/courses/:id', to: "courses#show"

@@ -1,7 +1,9 @@
+<h1>Update Course</h1>
+
 <form action="/courses/<%= @course.id %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Course</p>
+  <p>Enter new course details:</p>
 
   <div>
     <label for="course_name">Course Name:</label>

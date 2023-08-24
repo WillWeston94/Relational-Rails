@@ -7,8 +7,9 @@
   <% @faculties.each do |faculty| %>
   <div>
     <a href="/faculties/<%= faculty.id %>">
-    <p><%= faculty.name %> <%= faculty.created_at%></p>
+    <p><%= faculty.name %> <%= faculty.created_at%><%= link_to '    Update Faculty Member', edit_faculty_path(faculty) %></p>
     </a>
+  </div>
   </div>
   <% end %>
 </ul>
