@@ -236,6 +236,18 @@
           1,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           1,
           1,
           null
@@ -273,11 +285,11 @@
           1,
           1,
           1,
-          1,
+          0,
           null,
-          1,
+          0,
           null,
-          1,
+          0,
           null,
           null,
           null,
@@ -287,7 +299,6 @@
       "/Users/williamweston/Turing/2module/1project/school_manager/app/models/faculty.rb": {
         "lines": [
           1,
-          null,
           1,
           null
         ]
@@ -300,6 +311,6 @@
         ]
       }
     },
-    "timestamp": 1692807254
+    "timestamp": 1692903872
   }
 }

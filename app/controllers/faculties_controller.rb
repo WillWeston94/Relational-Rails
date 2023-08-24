@@ -20,9 +20,8 @@ class FacultiesController < ApplicationController
       office_hours: params[:office_hours],
       years_instructing: params[:years_instructing]
     })
-
+    
     faculty.save
-
     redirect_to '/faculties'
   end
 

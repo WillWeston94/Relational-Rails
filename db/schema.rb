@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_23_130655) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "course_name"
+    t.text "professor"
     t.boolean "gen_ed"
     t.integer "credits"
     t.text "start_date"
