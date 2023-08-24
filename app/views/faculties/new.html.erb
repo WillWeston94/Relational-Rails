@@ -1,0 +1,38 @@
+<h1>Register new faculty member</h1>
+
+<form action="/faculties" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter faculty member details:</p>
+
+  <div>
+    <label for="faculty_name">Name:</label>
+    <input type="text" name="[name]" id="name">
+  </div>
+
+  <div>
+    <label for="faculty_department">Department:</label>
+    <input type="text" name="[department]" id="department">
+  </div>
+
+  <div>
+    <label for="faculty_email">Email:</label>
+    <input type="text" name="[email]" id="email">
+  </div>
+
+  <div>
+    <label for="faculty_phone">Phone:</label>
+    <input type="text" name="[phone]" id="phone">
+  </div>
+
+  <div>
+    <label for="faculty_office_hours">Office Hours:</label>
+    <input type="text" name="[office_hours]" id="office_hours">
+  </div>
+
+  <div>
+    <label for="faculty_years_instructing">Years Instructing:</label>
+    <input type="text" name="[years_instructing]" id="years_instructing">
+  </div>
+
+  <input type='submit' value='Create Faculty'/>
+</form>

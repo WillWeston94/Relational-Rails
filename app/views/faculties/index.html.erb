@@ -1,0 +1,15 @@
+<h1>Faculty Directory</h1>
+
+<p><a href="/courses">Our Courses</a></p>
+<a href="<%= new_faculty_path %>">New Faculty</a>
+
+<ul>
+  <% @faculties.each do |faculty| %>
+  <div>
+    <a href="/faculties/<%= faculty.id %>">
+    <p><%= faculty.name %> <%= faculty.created_at%></p>
+    </a>
+  </div>
+  <% end %>
+</ul>
+

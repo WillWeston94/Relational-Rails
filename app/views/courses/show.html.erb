@@ -1,0 +1,13 @@
+<p><a href="/faculties">Our Faculty</a></p>
+<a href="/courses">Our Courses</a>
+
+<hr>
+<% @faculty.courses.each do |course| %>
+<p><strong>Professor:</strong> <%= course.professor %></p>
+<p><%= course.course_name %></p>
+<p><strong>General Education Course:</strong> <%= course.gen_ed %></p>
+<p><strong>Credits:</strong> <%= course.credits %></p>
+<p><strong>Class Start Date:</strong> <%= course.start_date %></p>
+<p><strong>Class End Date:</strong> <%= course.end_date %></p>
+<hr>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>Course Directory</h1>
+
+<a href="/faculties">Our Faculty</a>
+
+<ul>
+  <% @courses.each do |course| %>
+  <div>
+    <p><%= course.course_name %></p>
+  </div>
+  <% end %>
+</ul>
