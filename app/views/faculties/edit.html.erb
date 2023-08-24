@@ -1,7 +1,9 @@
-<form action="/faculties/<%= @faculty.id %>" method="post">
+<h1>Update Faculty</h1>
+
+<form action="<%= update_faculty_path(@faculty) %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <input type="hidden" name="_method" value="PATCH" />
-  <p>Update Faculty</p>
+  <p>Enter new faculty details:</p>
 
     <div>
     <label for="faculty_name">Name:</label>
