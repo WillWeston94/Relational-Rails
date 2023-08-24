@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get '/faculties', to: "faculties#index"
   get "/faculties/new", to: "faculties#new", as: 'new_faculty'
   post "/faculties", to: "faculties#create" 
+
   get '/faculties/:id', to: "faculties#show"
+  get '/faculties/:id/edit', to: 'faculties#edit'
+  patch '/faculties/:id', to: 'faculties#update'
+  
   get '/courses', to: "courses#index"
   get '/courses/:id', to: "courses#show"
   get '/faculties/:id/courses', to: "courses#show"

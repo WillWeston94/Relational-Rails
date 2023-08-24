@@ -1,6 +1,7 @@
 <a href="/faculties">Our Faculty</a>
 <p><a href="/courses">Our Courses</a></li></p>
 <p><%= link_to 'View Courses', faculty_courses_path(@faculty) %></p>
+<a href="/faculties/<%= @faculty.id %>/edit">Update Parent</a>
 
 <p><%= @faculty.name %></p>
 <p><strong>Department:</strong> <%= @faculty.department %></p>
