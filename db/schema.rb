@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_23_130655) do
     t.integer "credits"
     t.text "start_date"
     t.text "end_date"
+    t.text "professor"
   end
 
   create_table "faculties", force: :cascade do |t|
