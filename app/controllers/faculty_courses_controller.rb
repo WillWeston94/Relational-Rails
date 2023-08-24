@@ -10,7 +10,7 @@ class FacultyCoursesController < ApplicationController
 
   def create
     faculty = Faculty.find(params[:faculty_id])
-    course = Course.new({
+    course = faculty.courses.build({
       course_name: params[:course_name],
       professor: params[:professor],
       gen_ed: params[:gen_ed],
