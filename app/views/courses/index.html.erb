@@ -5,7 +5,7 @@
 <ul>
   <% @gen_ed_courses.each do |course| %>
   <div>
-    <p><%= course.course_name %></p>
+    <p><%= course.course_name %><%= link_to '    Update Course ', edit_course_path(course) %></p></p>
   </div>
   <% end %>
 </ul>

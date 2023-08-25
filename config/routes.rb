@@ -11,11 +11,12 @@ Rails.application.routes.draw do
    get '/faculties/:id', to: "faculties#show"
    get '/faculties/:id/edit', to: 'faculties#edit', as: 'edit_faculty'
    patch '/faculties/:id', to: 'faculties#update', as: 'update_faculty'
-   
+   delete '/faculties/:id', to: 'faculties#destroy'
+
    get '/courses', to: "courses#index"
    get '/courses/:id', to: "courses#show"
-   get '/courses/:id/edit', to: 'courses#edit'
-   patch '/courses/:id', to: 'courses#update'
+   get '/courses/:id/edit', to: 'courses#edit', as: 'edit_course'
+   patch '/courses/:id', to: 'courses#update', as: 'update_course'
  
    get '/faculties/:id/courses', to: "courses#show"
    get '/faculties/:faculty_id/courses', to: 'courses#index', as: 'faculty_courses'
