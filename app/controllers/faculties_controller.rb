@@ -43,4 +43,9 @@ class FacultiesController < ApplicationController
     faculty.save
     redirect_to "/faculties/#{faculty.id}"
   end
+
+  def destroy
+    Faculty.destroy(params[:id])
+    redirect_to '/faculties'
+  end
 end

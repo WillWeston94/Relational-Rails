@@ -1,6 +1,8 @@
 class CoursesController < ApplicationController
   def index
-    @gen_ed_courses = Course.gen_ed_courses
+    @courses = Course.all
+    # @gen_ed_courses = Course.gen_ed_courses
+    # @courses = Course.all
   end
 
   def new
@@ -9,8 +11,8 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @courses = Course.find(params[:id])
-    @faculty = @courses.faculty
+    @course = Course.find(params[:id])
+    @faculty = @course.faculty
   end
 
   def create
@@ -45,5 +47,11 @@ class CoursesController < ApplicationController
 
     course.save
     redirect_to "/courses/#{course.id}"
+  end
+
+  def destroy
+    @course = Course.find(params[:id])
+    @course.destroy
+    redirect_to '/courses'
   end
 end

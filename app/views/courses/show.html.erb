@@ -1,15 +1,20 @@
 <p><a href="/faculties">Our Faculty</a></p>
 <p><a href="/courses">Our Courses</a></p>
 <p><a href="<%= new_course_path(faculty_id: @faculty.id) %>">New Course</a></p>
-<a href="/courses/<%= @faculty.id %>/edit">Update Course</a>
 
 <hr>
-<% @faculty.courses.each do |course| %>
-<p><%= course.course_name %></p>
-<p><strong>Professor:</strong> <%= course.professor %></p>
-<p><strong>General Education Course:</strong> <%= course.gen_ed %></p>
-<p><strong>Credits:</strong> <%= course.credits %></p>
-<p><strong>Class Start Date:</strong> <%= course.start_date %></p>
-<p><strong>Class End Date:</strong> <%= course.end_date %></p>
+<form action="<%= delete_course_path(@course) %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Course"/>
+</form>
 <hr>
-<% end %>
+<p><a href="/courses/<%= @faculty.id %>/edit">Update Course</a></p>
+
+<p><%= @course.course_name %></p>
+<p><strong>Professor:</strong> <%= @course.professor %></p>
+<p><strong>General Education Course:</strong> <%= @course.gen_ed %></p>
+<p><strong>Credits:</strong> <%= @course.credits %></p>
+<p><strong>Class Start Date:</strong> <%= @course.start_date %></p>
+<p><strong>Class End Date:</strong> <%= @course.end_date %></p>
+
