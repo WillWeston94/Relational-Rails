@@ -1,11 +1,19 @@
 <h1>General Education Directory</h1>
-
+<p><a href="/">University</a></p>
 <a href="/faculties">Our Faculty</a>
 
 <ul>
-  <% @gen_ed_courses.each do |course| %>
+  <% @courses.each do |course| %>
   <div>
-    <p><%= course.course_name %><%= link_to '    Update Course ', edit_course_path(course) %></p></p>
+    <p><%= course.course_name %>
+     <p><%= link_to 'View Course', course_path(course) %></p>
+        <%= link_to '    Update Course ', edit_course_path(course) %></p>
+    <hr>
+    <form action="/courses/<%= course.id %>" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete Course"/>
+</form>
   </div>
   <% end %>
 </ul>

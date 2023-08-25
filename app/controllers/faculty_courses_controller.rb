@@ -25,7 +25,9 @@ class FacultyCoursesController < ApplicationController
   end
 
   def show
-    @courses = Course.find(params[:id])
-    @faculty = @courses.faculty
+    @faculty = Faculty.find(params[:id])
+    @courses = @faculty.courses
+    # @courses = Course.find(params[:id])
+    # @faculty = @courses.faculty
   end
 end
