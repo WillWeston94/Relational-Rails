@@ -6,7 +6,7 @@ class Faculties < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :phone
       t.boolean :office_hours
-      t.string :years_instructing
+      t.integer :years_instructing
 
       t.timestamps
     end

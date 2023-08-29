@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe "Faculty show", type: :feature do
   describe "As a visitor" do
-    describe "When I visit /faculty/:id" do
-      xit "displays faculty id including attributes " do
-        faculty_1 = Faculty.create(department: "testing")
+    describe "When I visit /faculties/:id" do
+      it "displays faculty including attributes " do
+        faculty_1 = Faculty.create(department: "Computer Science Information")
 
           visit "/faculties/:id"
 
