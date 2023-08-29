@@ -21,7 +21,8 @@ Rails.application.routes.draw do
    delete '/courses/:id', to: 'courses#destroy', as: 'delete_course'
 
    get '/faculties/:id/courses', to: "faculty_courses#show"
-   get '/faculties/:faculty_id/courses', to: 'courses#index', as: 'faculty_courses'
+   get '/faculties/:faculty_id/courses', to: 'faculty_courses#index', as: 'faculty_courses'
    get '/faculty_courses/new', to: "faculty_courses#new", as: 'new_course'
    post "/faculties/:faculty_id/courses", to: "faculty_courses#create"
+   get '/faculties/:faculty_id/courses/filter', to: 'faculty_courses#filter', as: 'filter_faculty_courses'
  end
