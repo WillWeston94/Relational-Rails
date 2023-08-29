@@ -2,6 +2,7 @@
 <p><a href="/">University</a></p>
 <p><a href="/courses">Our Courses</a></p>
 <a href="<%= new_faculty_path %>">New Faculty</a>
+<p><%= link_to "Sort by Number of Courses", faculties_path(sort_by: "courses") %>
 
 <ul>
   <% @faculties.each do |faculty| %>

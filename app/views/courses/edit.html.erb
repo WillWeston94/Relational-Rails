@@ -1,8 +1,9 @@
 <h1>Update Course</h1>
-
+<p><a href="/faculties">Our Faculty</a></p>
+<p><a href="/courses">Our Courses</a></li></p>
 <form action="<%= update_course_path(@course) %>" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="PATCH" />
+  <input type="hidden" name="_method" value="PATCH" />
   <p>Enter new course details:</p>
 
   <div>

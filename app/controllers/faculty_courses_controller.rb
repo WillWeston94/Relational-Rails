@@ -1,9 +1,8 @@
 class FacultyCoursesController < ApplicationController
   def index
     @faculty = Faculty.find(params[:faculty_id])
-
-    if params[:sort] == 'true'
-      @courses = @faculty.courses.order(course_name: :asc)
+    if params[:sort_alpha] == 'true'
+      @courses = @faculty.courses_alphabetical
     else
       @courses = @faculty.courses
     end
@@ -45,5 +44,10 @@ class FacultyCoursesController < ApplicationController
     @courses = @courses.where('credits > ?', threshold)
 
     render :index
+  end
+
+  def new
+    @faculty = Faculty.find(params[:faculty_id])
+    @course = Course.new
   end
 end

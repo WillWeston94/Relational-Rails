@@ -25,4 +25,5 @@ Rails.application.routes.draw do
    get '/faculty_courses/new', to: "faculty_courses#new", as: 'new_course'
    post "/faculties/:faculty_id/courses", to: "faculty_courses#create"
    get '/faculties/:faculty_id/courses/filter', to: 'faculty_courses#filter', as: 'filter_faculty_courses'
+   get '/faculties/:id/courses/new', to: 'faculty_courses#new', as: 'new_faculty_course'
  end

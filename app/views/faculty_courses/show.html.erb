@@ -1,6 +1,6 @@
 <p><a href="/faculties">Our Faculty</a></p>
 <p><a href="/courses">Our Courses</a></p>
-<p><a href="<%= new_course_path(faculty_id: @faculty.id) %>">New Course</a></p>
+<p><a href="/faculties/<%=@faculty.id %>/courses/new" %>New Course</a></p>
 <a href="/faculties/<%= @faculty.id %>/courses?sort=true">Alphabetical Sort</a>
 
 <%= form_tag filter_faculty_courses_path(@faculty), method: :get do %>

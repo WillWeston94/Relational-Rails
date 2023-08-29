@@ -1,6 +1,10 @@
 class FacultiesController < ApplicationController
   def index
-    @faculties = Faculty.order(created_at: :desc)
+    if params[:sort] == 'true'
+      @faculties = Faculty.faculties_by_created_at
+    elsif
+    @faculties = Faculty.order_by_count
+    end
   end
 
   def new

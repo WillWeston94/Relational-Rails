@@ -7,12 +7,14 @@
     <%= submit_tag 'Filter' %>
 <% end %> credits:'
 <hr>
+
 <form action="<%= delete_course_path(@course) %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Course"/>
 </form>
 <hr>
+
 <p><a href="/courses/<%= @faculty.id %>/edit">Update Course</a></p>
 
 <p><%= @course.course_name %></p>
