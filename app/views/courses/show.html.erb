@@ -1,7 +1,11 @@
 <p><a href="/faculties">Our Faculty</a></p>
 <p><a href="/courses">Our Courses</a></p>
 <p><a href="<%= new_course_path(faculty_id: @faculty.id) %>">New Course</a></p>
-
+<%= form_tag filter_faculty_courses_path(@faculty), method: :get do %>
+    <%= label_tag 'threshold', 'Return classes with credits worth more than' %>
+    <%= text_field_tag 'threshold' %>
+    <%= submit_tag 'Filter' %>
+<% end %> credits:'
 <hr>
 <form action="<%= delete_course_path(@course) %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

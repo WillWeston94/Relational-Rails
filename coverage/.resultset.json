@@ -59,11 +59,10 @@
           1
         ]
       },
-      "/Users/williamweston/Turing/2module/1project/school_manager/config/environments/development.rb": {
+      "/Users/williamweston/Turing/2module/1project/school_manager/config/environments/test.rb": {
         "lines": [
           1,
           null,
-          1,
           null,
           null,
           null,
@@ -72,6 +71,23 @@
           1,
           null,
           null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
           1,
           null,
           null,
@@ -81,31 +97,11 @@
           1,
           null,
           null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
           1,
           null,
           1,
           null,
           null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          null,
-          1,
           null,
           null,
           1,
@@ -118,12 +114,6 @@
           null,
           null,
           1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -240,12 +230,16 @@
           1,
           1,
           1,
-          null,
-          1,
-          1,
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
           1,
           1,
           1,
@@ -296,21 +290,22 @@
           null
         ]
       },
-      "/Users/williamweston/Turing/2module/1project/school_manager/app/models/faculty.rb": {
+      "/Users/williamweston/Turing/2module/1project/school_manager/spec/models/faculties_spec.rb": {
         "lines": [
           1,
-          1,
-          null
-        ]
-      },
-      "/Users/williamweston/Turing/2module/1project/school_manager/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
           null
         ]
       }
     },
-    "timestamp": 1692903872
+    "timestamp": 1693316777
   }
 }

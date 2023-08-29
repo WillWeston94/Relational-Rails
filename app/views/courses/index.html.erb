@@ -3,7 +3,7 @@
 <a href="/faculties">Our Faculty</a>
 
 <ul>
-  <% @courses.each do |course| %>
+  <% @gen_ed_courses.each do |course| %>
   <div>
     <p><%= course.course_name %>
      <p><%= link_to 'View Course', course_path(course) %></p>
