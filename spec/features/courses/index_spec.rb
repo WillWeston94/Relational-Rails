@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe "Course Index", type: :feature do
   describe "As a visitor" do
     describe "When I visit /courses" do
-      it "displays each course record in the system" do
-        course_1 = Course.create(course_name: "Vector Analysis")
-        course_2 = Course.create(course_name: "Calculus II")
+      it "displays gen ed courses in the system" do
+        course_1 = Course.create(course_name: "Calculus II")
+        course_2 = Course.create(course_name: "Modern Algebra")
 
           visit '/courses'
 

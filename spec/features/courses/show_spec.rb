@@ -6,9 +6,9 @@ RSpec.describe "Courses show", type: :feature do
       it "displays courses including attributes " do
         course_1 = Course.create(course_name: "Data Structures")
 
-          visit "/courses/:id"
+        visit "/courses/#{course_1.id}"
 
-          expect(page).to have_content(course_1.course_name)
+        expect(page).to have_content(course_1.course_name)
       end
     end
   end

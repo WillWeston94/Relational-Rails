@@ -7,10 +7,10 @@ RSpec.describe "Faculty Index", type: :feature do
         faculty_1 = Faculty.create(name: "Mr. Fernando Cantillo")
         faculty_2 = Faculty.create(name: "Mr. Mike Rice")
 
-          visit "/faculties"
+        visit '/faculties'
 
-          expect(page).to have_content(faculty_1.name)
-          expect(page).to have_content(faculty_2.name)
+        expect(page).to have_content(faculty_1.name)
+        expect(page).to have_content(faculty_2.name)
       end
     end
   end

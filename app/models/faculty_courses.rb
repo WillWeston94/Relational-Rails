@@ -1,2 +1,0 @@
-class FacultyCourses < ApplicationRecord
-end

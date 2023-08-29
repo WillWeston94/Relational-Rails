@@ -6,9 +6,9 @@ RSpec.describe "Faculty show", type: :feature do
       it "displays faculty including attributes " do
         faculty_1 = Faculty.create(department: "Computer Science Information")
 
-          visit "/faculties/:id"
+        visit "/faculties/#{faculty_1.id}"
 
-          expect(page).to have_content(faculty_1.department)
+        expect(page).to have_content(faculty_1.department)
       end
     end
   end
