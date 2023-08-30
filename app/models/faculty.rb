@@ -24,4 +24,8 @@ class Faculty < ApplicationRecord
   def courses_alphabetical
     self.courses.order(:name)
   end
+
+  def self.order_by_count
+    Faculty.joins(:courses).group(:id).order('count(courses.id) desc')
+  end
 end

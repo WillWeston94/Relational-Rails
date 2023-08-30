@@ -2,21 +2,23 @@
 <p><a href="/">University</a></p>
 <p><a href="/courses">Our Courses</a></p>
 <a href="<%= new_faculty_path %>">New Faculty</a>
-<p><%= link_to "Sort by Number of Courses", faculties_path(sort_by: "courses") %>
+<p><%= link_to "Sort by Number of Courses", faculties_path(sort_by: "courses") %></p>
 
-<ul>
-  <% @faculties.each do |faculty| %>
-  <div>
-    <a href="/faculties/<%= faculty.id %>">
-    <p><%= faculty.name %> <%= faculty.created_at%><%= link_to '    Update Faculty Member', edit_faculty_path(faculty) %><hr>
-<form action="/faculties/<%= faculty.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" value="Delete Faculty"/>
-</form>
-<hr></p>
-    </a>
-  </div>
-  </div>
-  <% end %>
-</ul>
+  <ul>
+    <% @faculties.each do |faculty| %>
+    <div>
+     <a href="/faculties/<%= faculty.id %>">
+     <p><%= faculty.name %> <%= faculty.created_at%><%= link_to '  Update Faculty Member', edit_faculty_path(faculty) %><hr>
+
+    <form action="/faculties/<%= faculty.id %>" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete Faculty"/>
+    </form>
+
+      <hr>
+      </p>
+      </a>
+      </div>
+      <% end %>
+  </ul>

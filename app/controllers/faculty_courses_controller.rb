@@ -47,7 +47,7 @@ class FacultyCoursesController < ApplicationController
   end
 
   def new
-    @faculty = Faculty.find(params[:faculty_id])
+    @faculty = Faculty.find(params[:id])
     @course = Course.new
   end
 end
