@@ -5,16 +5,14 @@
     <%= label_tag 'threshold', 'Return classes with credits worth more than' %>
     <%= text_field_tag 'threshold' %>
     <%= submit_tag 'Filter' %>
-<% end %> credits:'
+<% end %>
 <hr>
-
 <form action="<%= delete_course_path(@course) %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Course"/>
 </form>
 <hr>
-
 <p><a href="/courses/<%= @faculty.id %>/edit">Update Course</a></p>
 
 <p><%= @course.course_name %></p>
