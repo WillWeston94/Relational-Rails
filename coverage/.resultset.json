@@ -486,26 +486,6 @@
           null
         ]
       },
-      "/Users/williamweston/Turing/2module/1project/school_manager/spec/models/course_spec.rb": {
-        "lines": [
-
-        ]
-      },
-      "/Users/williamweston/Turing/2module/1project/school_manager/spec/models/faculty_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          2,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
       "/Users/williamweston/Turing/2module/1project/school_manager/app/models/faculty.rb": {
         "lines": [
           1,
@@ -752,6 +732,6 @@
         ]
       }
     },
-    "timestamp": 1693354847
+    "timestamp": 1693401705
   }
 }
