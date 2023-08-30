@@ -18,6 +18,14 @@ RSpec.describe "Faculty_Courses New", type: :feature do
         expect(page).to have_field("start_date")
         expect(page).to have_field("end_date")
 
+        fill_in "professor", with: "Mr. Mike Rice"
+        fill_in "course_name", with: "Calculus III"
+
+        click_button "Create Course"
+# setup 
+# exercise
+# assertion 
+# teardown
       end
     end
   end

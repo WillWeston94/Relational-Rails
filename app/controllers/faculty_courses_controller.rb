@@ -8,6 +8,16 @@ class FacultyCoursesController < ApplicationController
     end
   end
 
+  def filter
+    @faculty = Faculty.find(params[:faculty_id])
+    @courses = @faculty.courses
+
+    threshold = params[:threshold].to_i
+    @courses = @courses.where('credits > ?', threshold)
+
+    render :index
+  end
+  
   def new
     @faculty = Faculty.find(params[:faculty_id])
     @course = Course.new
@@ -15,6 +25,7 @@ class FacultyCoursesController < ApplicationController
 
   def create
     faculty = Faculty.find(params[:faculty_id])
+    # binding.pry
     course = faculty.courses.build({
       course_name: params[:course_name],
       professor: params[:professor],
@@ -32,19 +43,9 @@ class FacultyCoursesController < ApplicationController
   def show
     @faculty = Faculty.find(params[:id])
     @courses = @faculty.courses
-    # @courses = Course.find(params[:id])
-    # @faculty = @courses.faculty
   end
 
-  def filter
-    @faculty = Faculty.find(params[:faculty_id])
-    @courses = @faculty.courses
-
-    threshold = params[:threshold].to_i
-    @courses = @courses.where('credits > ?', threshold)
-
-    render :index
-  end
+ 
 
   def new
     @faculty = Faculty.find(params[:id])

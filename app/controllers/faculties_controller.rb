@@ -4,6 +4,8 @@ class FacultiesController < ApplicationController
       @faculties = Faculty.faculties_by_created_at
     elsif
     @faculties = Faculty.order_by_count
+    else
+      @faculties = Faculty.all
     end
   end
 

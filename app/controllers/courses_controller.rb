@@ -25,7 +25,7 @@ class CoursesController < ApplicationController
     })
 
     course.save
-    redirect_to "/courses/#{course.id}"
+    redirect_to "/faculties/#{faculty.id}/courses"
   end
 
   def edit

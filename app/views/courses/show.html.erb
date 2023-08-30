@@ -13,7 +13,8 @@
   <input type="submit" value="Delete Course"/>
 </form>
 <hr>
-<p><a href="/courses/<%= @faculty.id %>/edit">Update Course</a></p>
+<p><a href="<%= edit_course_path(@course) %>">Update Course</a></p>
+
 
 <p><%= @course.course_name %></p>
 <p><strong>Professor:</strong> <%= @course.professor %></p>

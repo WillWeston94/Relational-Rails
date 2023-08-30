@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_29_201243) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_30_174152) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,7 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_201243) do
     t.string "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "faculty_id"
+    t.bigint "faculty_id"
+    t.index ["faculty_id"], name: "index_courses_on_faculty_id"
   end
 
   create_table "faculties", force: :cascade do |t|
@@ -37,16 +38,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_29_201243) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "faculty_courses", force: :cascade do |t|
-    t.bigint "faculty_id"
-    t.bigint "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_faculty_courses_on_course_id"
-    t.index ["faculty_id"], name: "index_faculty_courses_on_faculty_id"
-  end
-
-  add_foreign_key "courses", "faculties", name: "courses_faculty_id_fkey"
-  add_foreign_key "faculty_courses", "courses"
-  add_foreign_key "faculty_courses", "faculties"
+  add_foreign_key "courses", "faculties"
 end
