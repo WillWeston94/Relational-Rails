@@ -7,7 +7,9 @@ This rails project is a basic layout for a University Management System that inc
 
 ### Relationships
 
-![Screenshot 2023-08-22 at 8 31 25 AM](https://github.com/WillWeston94/faculties_controller/assets/136198381/d24caf4b-7f01-4635-b734-6f7c76734632)
+
+![DBDesigner](https://github.com/WillWeston94/faculties_controller/assets/136198381/f10332ca-9b33-47b5-98e1-90b8a997527c)
+
 
 
 ## User Stories
