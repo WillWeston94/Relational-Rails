@@ -7,6 +7,7 @@ This rails project is a basic layout for a University Management System that inc
 
 ### Relationships
 
+![Screenshot 2023-08-22 at 8 31 25 AM](https://github.com/WillWeston94/faculties_controller/assets/136198381/d24caf4b-7f01-4635-b734-6f7c76734632)
 
 
 ## User Stories
@@ -125,6 +126,8 @@ As a visitor When I visit the parent index page Next to every parent, I see a li
 As a visitor When I visit the child_table_name index page or a parent child_table_name index page Next to every child, I see a link to delete that child When I click the link I should be taken to the child_table_name index page where I no longer see that child
 
 Extensions
+
+
 [√] Extension 1: Sort Parents by Number of Children
 
 As a visitor When I visit the Parents Index Page Then I see a link to sort parents by the number of child_table_name they have When I click on the link I'm taken back to the Parent Index Page where I see all of the parents in order of their count of child_table_name (highest to lowest) And, I see the number of children next to each parent name
